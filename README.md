@@ -9,7 +9,7 @@ packages from the gallery and run in PowerShell console:
 Chocolatey UI package makes the process more user friendly, however command line acolytes may disagree :) 
 Please visit Chocolatey [home page][9] for more information.
 
-[[https://github.com/ObjectivityLtd/MACK/blob/master/images/ChocoGUI.PNG]]
+![Choco GUI](https://github.com/ObjectivityLtd/MACK/blob/master/images/ChocoGUI.PNG)
 
 # Chocolatey with Azure Automation Server #
 
@@ -40,7 +40,7 @@ There is a risk that this manual and scripts are not longer up to date, so in ca
 
 3. Go to [Azure Portal][8] and check whether your machine appeared in node list
 
-[[https://github.com/ObjectivityLtd/MACK/blob/master/images/AzureAutomationPullServerNode.PNG]]
+![Azure Automation Pull Server Node](https://github.com/ObjectivityLtd/MACK/blob/master/images/AzureAutomationPullServerNode.PNG)
 
 In case of problems in most cases helps:
 * disabling IP v6
