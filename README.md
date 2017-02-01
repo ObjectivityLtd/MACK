@@ -2,9 +2,13 @@
 
 [Chocolatey][9] is a great tool that reduces time required to configure new development machine or a machine of 
 a new team member. For simple scenarios just edit chocomachine.config, refine it by removing or adding new 
-packages from the gallery and run in PowerShell console:
+packages from the gallery and run in PowerShell console **run as Administrator**:
 
-    Configure.ps1 -mode 'local' 
+        Configure.ps1 -mode 'local' 
+
+It may be required to set policy execution first:
+
+        Set-ExecutionPolicy Unrestricted 
 
 Chocolatey UI package makes the process more user friendly, however command line acolytes may disagree :) 
 Please visit Chocolatey [home page][9] for more information.
