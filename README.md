@@ -6,11 +6,15 @@ packages from the gallery and run in PowerShell console **run as Administrator**
 
         Configure.ps1 -mode 'local' 
 
+Alternatively you can clone chocomachine.config, customise it, commit into your team repository and use as parameter, e.g.
+
+        Configure.ps1 -mode 'local' -LocalConfigurationFilePath <drive:>\<teamrepository>\localdevchocomachine.config
+
 It may be required to set policy execution first:
 
         Set-ExecutionPolicy Unrestricted 
 
-Chocolatey UI package makes the process more user friendly, however command line acolytes may disagree :) 
+**Chocolatey UI** package makes the process more user friendly, however command line acolytes may disagree :) 
 Please visit Chocolatey [home page][9] for more information.
 
 ![Choco GUI](https://github.com/ObjectivityLtd/MACK/blob/master/images/ChocoGUI.PNG)

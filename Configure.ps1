@@ -4,6 +4,7 @@
     [string]$configurationFileName = 'devdsc.ps1',
     [string]$configurationName = 'devdsc',
     [string]$configurationNodeName = 'workstation',
+    [string]$LocalConfigurationFilePath = 'chocomachine.config',
 
     [ValidateSet('full','onboard','provision','local')]
     [string]$mode = 'onboard'
@@ -15,7 +16,7 @@
 
 # Local mode
 if ($mode -eq 'local') {
-    Add-LocalChoco
+    Add-LocalChoco $LocalConfigurationFilePath
     return
 }
 
