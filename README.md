@@ -1,7 +1,7 @@
 # Chocolatey #
 
 [Chocolatey][9] is a great tool that reduces time required to configure new development machine or a machine of 
-a new team member. For simple scenarios just edit chocomachine.config, refine it by removing or adding new 
+a new team member. For simple scenarios just edit chocomachine.config in config folder, refine it by removing or adding new 
 packages from the gallery and run in PowerShell console **run as Administrator**:
 
         Configure.ps1 
@@ -10,7 +10,11 @@ Alternatively you can clone chocomachine.config, customise it, commit into your 
 
         Configure.ps1 -LocalConfigurationFilePath <drive:>\<teamrepository>\localdevchocomachine.config
 
-It may be required to set policy execution first:
+However in that case please remember to copy visual studio administration installation file (vs2015.xml) and change the parameter path in your .config file as well
+        
+        <package id="visualstudio2015enterprise" version="2015.03.02" packageParameters="--AdminFile ./config/vs2015.xml" />
+
+Before running a Configure.ps1 it may be required to set policy execution first:
 
         Set-ExecutionPolicy Unrestricted 
 
