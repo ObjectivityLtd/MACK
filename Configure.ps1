@@ -1,13 +1,13 @@
  param (
     [string]$automationRg = 'rg-automation',
     [string]$automationAccount = 'automation',
-    [string]$configurationFileName = 'devdsc.ps1',
+    [string]$configurationFileName = './config/devdsc.ps1',
     [string]$configurationName = 'devdsc',
     [string]$configurationNodeName = 'workstation',
-    [string]$LocalConfigurationFilePath = 'chocomachine.config',
+    [string]$LocalConfigurationFilePath = './config/chocomachine.config',
 
     [ValidateSet('full','onboard','provision','local')]
-    [string]$mode = 'onboard'
+    [string]$mode = 'local'
  )
 
 . "$PSScriptRoot/lib/Add-AzurePullServer.ps1"

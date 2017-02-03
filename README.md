@@ -4,11 +4,11 @@
 a new team member. For simple scenarios just edit chocomachine.config, refine it by removing or adding new 
 packages from the gallery and run in PowerShell console **run as Administrator**:
 
-        Configure.ps1 -mode 'local' 
+        Configure.ps1 
 
 Alternatively you can clone chocomachine.config, customise it, commit into your team repository and use as parameter, e.g.
 
-        Configure.ps1 -mode 'local' -LocalConfigurationFilePath <drive:>\<teamrepository>\localdevchocomachine.config
+        Configure.ps1 -LocalConfigurationFilePath <drive:>\<teamrepository>\localdevchocomachine.config
 
 It may be required to set policy execution first:
 
