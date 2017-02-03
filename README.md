@@ -18,7 +18,7 @@ Before running a Configure.ps1 it may be required to set policy execution first:
 
         Set-ExecutionPolicy Unrestricted 
 
-**Chocolatey UI** package makes the process more user friendly, however command line acolytes may disagree :) 
+**Chocolatey UI** package makes the process more user friendly, although command line acolytes may disagree :) 
 Please visit Chocolatey [home page][9] for more information.
 
 ![Choco GUI](https://github.com/ObjectivityLtd/MACK/blob/master/images/ChocoGUI.PNG)
@@ -54,10 +54,17 @@ There is a risk that this manual and scripts are not longer up to date, so in ca
 
 ![Azure Automation Pull Server Node](https://github.com/ObjectivityLtd/MACK/blob/master/images/AzureAutomationPullServerNode.PNG)
 
+4. To onboard other team members machines, run Configure.ps1 -mode 'onboard' on their desktops with the same credentials 
+and parameters used to create AAP. More elegant is to create a service principal account and modify Configure.ps1 to use it, instead of prompting for credentials.
+
+### Important notes ###
 In case of problems in most cases helps:
 * disabling IP v6
-* changing all your networks to private or domain (of course if it is safe)
+* changing all your networks to private or domain; In fact script **Add-Workstation.ps1** already contains such operation:
 
+        Get-NetConnectionProfile -NetworkCategory Public | Set-NetConnectionProfile -NetworkCategory Private
+
+Please onboard your machine if you know all of your active networks are really trusted... and no, airport or restaurant networks don't qualify to be a such thing.
 
 [1]: https://azure.microsoft.com/en-us/documentation/articles/automation-dsc-cd-chocolatey/
 [2]: https://azure.microsoft.com/en-us/documentation/articles/automation-dsc-onboarding/#physicalvirtual-windows-machines-on-premises-or-in-a-cloud-other-than-azureaws
