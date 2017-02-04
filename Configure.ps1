@@ -4,7 +4,7 @@
     [string]$configurationFileName = './config/devdsc.ps1',
     [string]$configurationName = 'devdsc',
     [string]$configurationNodeName = 'workstation',
-    [string]$LocalConfigurationFilePath = './config/chocomachine.config',
+    [string]$LocalConfigurationFilePath = './config/dev.config',
 
     [ValidateSet('full','onboard','provision','local')]
     [string]$mode = 'local'

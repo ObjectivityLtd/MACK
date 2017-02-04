@@ -6,9 +6,9 @@ packages from the gallery and run in PowerShell console **run as Administrator**
 
         Configure.ps1 
 
-Alternatively you can clone chocomachine.config, customise it, commit into your team repository and use as parameter, e.g.
+Alternatively you can clone dev.config, customise it, commit into your team repository and use as parameter, e.g.
 
-        Configure.ps1 -LocalConfigurationFilePath <drive:>\<teamrepository>\localdevchocomachine.config
+        Configure.ps1 -LocalConfigurationFilePath <drive:>\<teamrepository>\dev.config
 
 However in that case please remember to copy visual studio administration installation file (vs2015.xml) and change the parameter path in your .config file as well
         
@@ -16,7 +16,7 @@ However in that case please remember to copy visual studio administration instal
 
 Before running a Configure.ps1 it may be required to set policy execution first:
 
-        Set-ExecutionPolicy Unrestricted 
+        Set-ExecutionPolicy -Scope Process -ExecutionPolicy Unrestricted 
 
 **Chocolatey UI** package makes the process more user friendly, although command line acolytes may disagree :) 
 Please visit Chocolatey [home page][9] for more information.
