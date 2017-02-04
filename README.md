@@ -1,4 +1,4 @@
-# Chocolatey #
+# Cooking local development machine with Chocolatey #
 
 [Chocolatey][9] is a great tool that reduces time required to configure new development machine or a machine of 
 a new team member. For simple scenarios just edit chocomachine.config in config folder, refine it by removing or adding new 
@@ -23,9 +23,10 @@ Please visit Chocolatey [home page][9] for more information.
 
 ![Choco GUI](https://github.com/ObjectivityLtd/MACK/blob/master/images/ChocoGUI.PNG)
 
-# Chocolatey with Azure Automation Server #
+# Using Chocolatey with Azure Automation Server for centralised management in big teams #
 
-This manual will help you to setup Azure Automation Pull Server and onboard your local development machine. 
+For bigget teams its worth considering a centralise management of their machines. 
+This manual will help you to setup Azure Automation Pull Server and onboard development machine onto it.
 Process is automated in one PowerShell script, however include manual verification step in [Azure Portal][8].
 
 ## Prerequisites ##
@@ -46,16 +47,17 @@ There is a risk that this manual and scripts are not longer up to date, so in ca
 
             Configure.ps1 -mode 'full'
 
-    * set -mode parameter to 'onboard' or leave empty if you would like only to on board your local machine:
+    * set -mode parameter to 'onboard' or leave empty if you would like only to on board machine:
     
             Configure.ps1 -mode 'onboard'
 
-3. Go to [Azure Portal][8] and check whether your machine appeared in node list
+3. Go to [Azure Portal][8] and check whether onboarded machine appeared in node list
 
 ![Azure Automation Pull Server Node](https://github.com/ObjectivityLtd/MACK/blob/master/images/AzureAutomationPullServerNode.PNG)
 
-4. To onboard other team members machines, run Configure.ps1 -mode 'onboard' on their desktops with the same credentials 
-and parameters used to create AAP. More elegant is to create a service principal account and modify Configure.ps1 to use it, instead of prompting for credentials.
+4. To onboard all team members, run Configure.ps1 -mode 'onboard' on their desktops with the same credentials 
+and parameters used to create AAP. More elegant is to create a service principal account, instead of providing credentials on each installation.
+This version supports only such simplified approach, however feel free to modify script accordingly.
 
 ### Important notes ###
 In case of problems in most cases helps:
