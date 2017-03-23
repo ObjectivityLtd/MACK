@@ -10,5 +10,5 @@ function Add-LocalChoco {
     iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
     SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
     choco install chocolateygui -y
-    choco install $LocalConfigurationFilePath -y
+    choco install $LocalConfigurationFilePath -y -pre
 }
