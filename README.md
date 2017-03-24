@@ -1,7 +1,7 @@
 # Cooking local development machine with Chocolatey #
 
 [Chocolatey][9] is a great tool that reduces time required to configure new development machine or a machine of 
-a new team member. For simple scenarios just edit chocomachine.config in config folder, refine it by removing or adding new 
+a new team member. For simple scenarios just edit dev.config in config folder, refine it by removing or adding new 
 packages from the gallery and run in PowerShell console **run as Administrator**:
 
         Configure.ps1 
@@ -25,7 +25,7 @@ Please visit Chocolatey [home page][9] for more information.
 
 # Using Chocolatey with Azure Automation Server for centralised management in big teams #
 
-For bigget teams its worth considering a centralise management of their machines. 
+For bigger teams it's worth considering a centralise management of their machines. 
 This manual will help you to setup Azure Automation Pull Server and onboard development machine onto it.
 Process is automated in one PowerShell script, however include manual verification step in [Azure Portal][8].
 
